@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		369C7C831D756CB400B95266 /* SwiftConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369C7C791D756CB400B95266 /* SwiftConnect.framework */; };
-		369C7C881D756CB400B95266 /* SwiftConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369C7C871D756CB400B95266 /* SwiftConnectTests.swift */; };
 		369C7C8A1D756CB400B95266 /* SwiftConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = 369C7C7C1D756CB400B95266 /* SwiftConnect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		369C7C941D7571C600B95266 /* JsonConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369C7C931D7571C600B95266 /* JsonConvertible.swift */; };
+		369C7C991D7571D500B95266 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369C7C951D7571D500B95266 /* HttpClient.swift */; };
+		369C7C9A1D7571D500B95266 /* HttpClientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369C7C961D7571D500B95266 /* HttpClientExtension.swift */; };
+		369C7C9B1D7571D500B95266 /* FakeHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369C7C971D7571D500B95266 /* FakeHttpClient.swift */; };
+		369C7C9C1D7571D500B95266 /* BasicHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369C7C981D7571D500B95266 /* BasicHttpClient.swift */; };
+		369C7CA11D7571EF00B95266 /* TestBasicHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369C7C9E1D7571EF00B95266 /* TestBasicHttpClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +32,13 @@
 		369C7C7C1D756CB400B95266 /* SwiftConnect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftConnect.h; sourceTree = "<group>"; };
 		369C7C7D1D756CB400B95266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		369C7C821D756CB400B95266 /* SwiftConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		369C7C871D756CB400B95266 /* SwiftConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConnectTests.swift; sourceTree = "<group>"; };
 		369C7C891D756CB400B95266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		369C7C931D7571C600B95266 /* JsonConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonConvertible.swift; sourceTree = "<group>"; };
+		369C7C951D7571D500B95266 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		369C7C961D7571D500B95266 /* HttpClientExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientExtension.swift; sourceTree = "<group>"; };
+		369C7C971D7571D500B95266 /* FakeHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeHttpClient.swift; sourceTree = "<group>"; };
+		369C7C981D7571D500B95266 /* BasicHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicHttpClient.swift; sourceTree = "<group>"; };
+		369C7C9E1D7571EF00B95266 /* TestBasicHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBasicHttpClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,9 @@
 		369C7C7B1D756CB400B95266 /* SwiftConnect */ = {
 			isa = PBXGroup;
 			children = (
+				369C7CA51D75747000B95266 /* Extensions */,
+				369C7CA41D75746300B95266 /* Implementations */,
+				369C7CA31D75744400B95266 /* Protocols */,
 				369C7C7C1D756CB400B95266 /* SwiftConnect.h */,
 				369C7C7D1D756CB400B95266 /* Info.plist */,
 			);
@@ -80,10 +93,36 @@
 		369C7C861D756CB400B95266 /* SwiftConnectTests */ = {
 			isa = PBXGroup;
 			children = (
-				369C7C871D756CB400B95266 /* SwiftConnectTests.swift */,
+				369C7C9E1D7571EF00B95266 /* TestBasicHttpClient.swift */,
 				369C7C891D756CB400B95266 /* Info.plist */,
 			);
 			path = SwiftConnectTests;
+			sourceTree = "<group>";
+		};
+		369C7CA31D75744400B95266 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				369C7C931D7571C600B95266 /* JsonConvertible.swift */,
+				369C7C951D7571D500B95266 /* HttpClient.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		369C7CA41D75746300B95266 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				369C7C981D7571D500B95266 /* BasicHttpClient.swift */,
+				369C7C971D7571D500B95266 /* FakeHttpClient.swift */,
+			);
+			name = Implementations;
+			sourceTree = "<group>";
+		};
+		369C7CA51D75747000B95266 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				369C7C961D7571D500B95266 /* HttpClientExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +188,7 @@
 					369C7C781D756CB400B95266 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = QL9Q47DN4Y;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					369C7C811D756CB400B95266 = {
@@ -198,6 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369C7C991D7571D500B95266 /* HttpClient.swift in Sources */,
+				369C7C9B1D7571D500B95266 /* FakeHttpClient.swift in Sources */,
+				369C7C9A1D7571D500B95266 /* HttpClientExtension.swift in Sources */,
+				369C7C941D7571C600B95266 /* JsonConvertible.swift in Sources */,
+				369C7C9C1D7571D500B95266 /* BasicHttpClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				369C7C881D756CB400B95266 /* SwiftConnectTests.swift in Sources */,
+				369C7CA11D7571EF00B95266 /* TestBasicHttpClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +367,7 @@
 		369C7C8E1D756CB400B95266 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QL9Q47DN4Y;
@@ -334,6 +380,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.banhtieu.SwiftConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +388,7 @@
 		369C7C8F1D756CB400B95266 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QL9Q47DN4Y;
@@ -360,6 +408,7 @@
 		369C7C911D756CB400B95266 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = QL9Q47DN4Y;
 				INFOPLIST_FILE = SwiftConnectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +421,7 @@
 		369C7C921D756CB400B95266 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = QL9Q47DN4Y;
 				INFOPLIST_FILE = SwiftConnectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
