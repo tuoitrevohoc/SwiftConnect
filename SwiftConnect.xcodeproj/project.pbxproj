@@ -15,6 +15,7 @@
 		369C7C9B1D7571D500B95266 /* FakeHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369C7C971D7571D500B95266 /* FakeHttpClient.swift */; };
 		369C7C9C1D7571D500B95266 /* BasicHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369C7C981D7571D500B95266 /* BasicHttpClient.swift */; };
 		369C7CA11D7571EF00B95266 /* TestBasicHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369C7C9E1D7571EF00B95266 /* TestBasicHttpClient.swift */; };
+		369C7CA71D75757400B95266 /* SwiftConnect.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 369C7CA61D75757400B95266 /* SwiftConnect.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		369C7C971D7571D500B95266 /* FakeHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeHttpClient.swift; sourceTree = "<group>"; };
 		369C7C981D7571D500B95266 /* BasicHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicHttpClient.swift; sourceTree = "<group>"; };
 		369C7C9E1D7571EF00B95266 /* TestBasicHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBasicHttpClient.swift; sourceTree = "<group>"; };
+		369C7CA61D75757400B95266 /* SwiftConnect.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftConnect.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		369C7C6F1D756CB400B95266 = {
 			isa = PBXGroup;
 			children = (
+				369C7CA61D75757400B95266 /* SwiftConnect.podspec */,
 				369C7C7B1D756CB400B95266 /* SwiftConnect */,
 				369C7C861D756CB400B95266 /* SwiftConnectTests */,
 				369C7C7A1D756CB400B95266 /* Products */,
@@ -228,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369C7CA71D75757400B95266 /* SwiftConnect.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
